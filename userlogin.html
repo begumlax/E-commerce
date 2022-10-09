@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
         * {
             margin: 0;
@@ -119,8 +118,7 @@
     </style>
 </head>
 
-<!DOCTYPE html>
-</body lang="en">
+<body lang="en">
 
     <head>
         <meta charset="UTF-8">
@@ -171,63 +169,49 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link" style="margin-top: 10px;" href="seller.html"> Sell</a>
+                            <a class="nav-link" style="margin-top: 10px;" href="seller.html"> Seller</a>
                         </li>
                         <li class="nav-item">
                             <i class="fa fa-user" style="margin-top: 10px;font-size:30px;padding-left:20px"
                                 aria-hidden="true"></i>
                         </li>
-                        <li class="nav-item">
-                            <a href="cart (2).html" style="color: black;"><i class="fa fa-shopping-cart"
-                                    style="margin-top: 10px;font-size:30px;padding-left:20px"
-                                    aria-hidden="true"></i></a>
-                        </li>
+
 
                 </div>
             </div>
         </nav>
-       <div class="formbold-main-wrapper">
-      
-           <div class="formbold-form-wrapper" style="margin-top:100px !important;">
-               <form>
-                   <h3 style="text-align: center;">SELL YOUR PRODUCT</h3>
-                   <br>
-                   <div class="formbold-mb-5">
-                       <label for="name" class="formbold-form-label"> Product Name </label>
-                       <input type="text" name="name" id="pname" required placeholder="Product Name"
-                           class="formbold-form-input" />
-                   </div>
-                   <div class="formbold-mb-5">
-                       <label for="phone" class="formbold-form-label">Product Image URL</label>
-                       <input type="text" id="purl" placeholder="Product URL" class="formbold-form-input" />
-                   </div>
-                   <div class="formbold-mb-5">
-                       <label for="email" class="formbold-form-label">Product Description</label>
-                       <input type="email" id="pdescrb" placeholder="Product Description" class="formbold-form-input" />
-                   </div>
-                   <div class="formbold-mb-5">
-                       <label for="email" class="formbold-form-label">Product Price </label>
-                       <input type="number" id="price" placeholder="Product Price" class="formbold-form-input" />
-                   </div>
-                     <div class="formbold-mb-5">
-                         <label for="email" class="formbold-form-label">Category</label>
-                         <!-- <input type="text" id="category" placeholder="Category" class="formbold-form-input" /> -->
-                         <select class="form-control" id="category" placeholder="Category">
-                             <option value="Tshirts">Tshirts</option>
-                             <option value="Womenstop">Womenstop</option>
-                             <option value="Mensshirt">Mensshirt</option>
-                            </select>
-                     </div>
-                       
-               </form>
-       <button class="formbold-btn" onclick="ProductAdd()">Confirm</button>
-               <div>
+        <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper" style="margin-top: 190px !important;">
+                <h3 style="text-align: center;">LOGIN AS A USER</h3>
+                <form>
+                    <div class="formbold-mb-5">
+                        <label for="name" class="formbold-form-label">Email </label>
+                        <input type="text" name="name" id="email" placeholder="Email" class="formbold-form-input" />
+                    </div>
+                    <div class="formbold-mb-5">
+                        <label for="phone" class="formbold-form-label">Password</label>
+                        <input type="text" id="password" placeholder="Password" class="formbold-form-input" />
+                    </div>
+                    <div>
 
-                   </div>
+                    </div>
+                </form>
+                <button onclick="UserLogin()" class="formbold-btn">LOGIN</button>
+
+                <br>
+                <br>
+                <a href="seller.html" style="text-align: center;margin-left:190px">Forgot Password ? </a>
+                <br>
+                <br>
+                <a href="userregister.html" style="text-align: center;margin-left:140px">Don't have an Account ?
+                    SignUp</a>
+            </div>
+        </div>
 
     </body>
 
-<script src="seller.js"></script>
+    <script src="seller.js"></script>
+
 
 
 </html>

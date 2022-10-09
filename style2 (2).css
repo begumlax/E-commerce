@@ -6,6 +6,55 @@
 }
 
 
+/* cart icon span number */
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: orange;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+/* cart icon span number */
+
+/* profile drop down */
+
+.bg-custom-1 {
+    background-color: #85144b;
+}
+
+.bg-custom-2 {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+/* profile drop down */
+
+body::-webkit-scrollbar {
+    width: 3px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 5px;
+    
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: white;
+    outline: 2px solid slategrey;
+}
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -46,8 +95,8 @@ button{
     font-weight: 700;
     outline: none;
     border: none;
-    background-color:white;
-    color: aliceblue;
+    /* background-color:black; */
+    /* color: aliceblue; */
     padding: 13px 30px;
     cursor: pointer;
     text-transform: uppercase;
@@ -55,10 +104,10 @@ button{
 
 }
 
-button:hover {
+/* button:hover {
 
     background-color: #3a3833;
-}
+} */
 
 hr{
     width: 30px;
@@ -174,6 +223,7 @@ hr{
     background-color: #f9f9f9;
     width: 100px;
     left: 0;
+    margin-left: 10px;
     /*box-shadow: 0px 8px 16px 0px white ;*/
     z-index: 1;
   }
@@ -311,6 +361,7 @@ hr{
 .product{
     cursor: pointer;
     margin: 0.0rem;
+    text-align: center !important;
 }
 
 .product img{
@@ -532,4 +583,10 @@ footer .copyright a:hover{
 
 .container form i{
     padding-left: 10px;
+}
+
+.producttops{
+cursor: pointer;
+margin: 0rem;
+display: -webkit-box;
 }

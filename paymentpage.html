@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Payment</title>
+    <link rel="stylesheet" href="paymentpage.css">
+    <!--SWEET ALERT-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card-container">
+
+            <div class="right">
+                <h1>Payment</h1>
+                <span></span>
+                <div class="form-container">
+                    <form>
+                        <div class="payment-section">
+                            <label for="payment">Payment Method</label>
+                            <input type="text" placeholder="ATM | CREDIT | DEBIT | PHONE PAY | GOOGLE PAY" name="payment" id="payment" />
+                        </div>
+                        <div class="input-items flex">
+                            <div class="marginright">
+                                <label for="firstName">First Name</label>
+                                <input type="text" placeholder="First Name" name="firstName" id="firstName" />
+                            </div>
+                            <div>
+                                <label for="lastName">Last Name</label>
+                                <input type="text" placeholder="Last Name" name="lastName" id="lastName" />
+                            </div>
+                        </div>
+                        <div class="input-items">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" placeholder="Card Number" name="cardNumber" id="cardNumber" />
+                        </div>
+                        <div class="input-items flex">
+                            <div>
+                                <label for="cardNumber">Expiration Date</label>
+                                <div class="flex marginright">
+                                    <span class="marginright">
+                                        <input type="text" placeholder="Expire Date" name="cardNumber" id="cardNumber" />
+                                    </span>
+                                    <input type="text" placeholder="Valid Date" name="cardNumber" id="cardNumber" />
+                                </div>
+                            </div>
+                            <div>
+                                <label for="cardNumber">CVV</label>
+                                <input type="text" placeholder="CVV" name="cardNumber" id="cardNumber" />
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="submit">
+                        <button onclick="Order()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function Order() {
+            swal({
+                title: "Good job!",
+                text: "Order Placed , Thank you",
+                icon: "success",
+                width: '300px',
+            }).then((value) => {
+                location.href = "index(2).html"
+            })
+        }
+    </script>
+</body>
+
+</html>
