@@ -49,7 +49,7 @@
                         <input type="text" name="" id="search-item" placeholder="search-product" onkeyup="search()">
                     </form>
                     <li class="nav-item">
-                        <a class="nav-link active" style="margin-top: 10px;" href="index(2).html">Home</a>
+                        <a class="nav-link active" style="margin-top: 10px;" href="index.html">Home</a>
                     </li>
                     <div class="dropdown">
                         <li class="nav-item">
@@ -131,35 +131,60 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="input_box_cart">
-                                    <input type="" placeholder="Full Name">
+                                     <label for="Category">Full Name : </label>
+                                    <input id="name" type="text" placeholder="Full Name">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="input_box_cart">
-                                    <input type="" placeholder="Mobile Number">
+                                     <label for="Category">Phone Number :</label>
+                                    <input id="phone" type="number" placeholder="Mobile Number">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="input_box_cart">
-                                    <input type="" placeholder="City">
+                                     <label for="Category">Street :</label>
+                                    <input id="street" type="text" placeholder="Street">
+
                                 </div>
                                 <div class="input_box_cart">
-                                    <input type="" placeholder="State">
+                                    <label for="Category">State :</label>
+                                    <select id="state" class="form-control custom-select browser-default">
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Punjab">Punjab</option>
+                                        </select>
+                                    <!-- <input id="state" type="text" placeholder="State"> -->
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="input_box_cart">
-                                    <input type="text" placeholder="Pin Code">
+                                     <label for="Category">City :</label>
+                                    <input id="city" type="text" placeholder="City">
                                 </div>
+                                <div class="input_box_cart">
+                                     <label for="Category">Pin Code :</label>
+                                    <input id="pincode" type="text" placeholder="Pin Code">
+                                </div>
+
 
                             </div>
                         </div>
                     </div>
-                    <a href="paymentpage.html" style="text-decoration: none;"> <button type="button" class="total_btn_cart text_center_button">
-                     Place Order
-                    </button></a>
+                    <button onclick="Placeorder()" type="button" class="total_btn_cart text_center_button">
+                        Place Order
+                    </button>
                 </div>
                 <div class="col-md-5">
                     <div class="yourCart_div">
@@ -196,9 +221,8 @@
             document.getElementById("pimg").src = productimgurl;
             document.getElementById("pdes").value = "Product Description :  " + productdescrb;
             document.getElementById("price").value = "Total Amount $" + productprice;
-
-        
         </script>
+        <script src="orders.js"></script>
 </body>
 
 </html>

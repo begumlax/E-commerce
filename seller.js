@@ -1,4 +1,8 @@
-function Login() {
+var countshirts = 0;
+var countTshirts = 0;
+var counttops = 0;
+countjeans = 0;
+function SellerLogin() {
     var emailid = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     fetch("http://127.0.0.1:5000/login", {
@@ -18,10 +22,26 @@ function Login() {
         .then((response) => response.json())
         // Displaying results to console
         .then((json) => {
-            alert(json.message);
+           
             if (json.status == true) {
-                alert(json.message);
-                location.href = "sellerform.html";
+                swal(
+                    'Success',
+                    'Login Success',
+                    'success'
+                ).then((value) => {
+                    localStorage.setItem("selleremail", json.email_id);
+                    localStorage.setItem("sellerid", json.seller_id);
+
+                    location.href = "sellerdashboard.html";
+
+                })
+               
+            }else{
+                swal(
+                    'Error!',
+                     json.message,
+                    'error',
+                )
             }
         });
 }
@@ -47,6 +67,7 @@ function UserLogin() {
         .then((response) => response.json())
         // Displaying results to console
         .then((json) => {
+            console.log(json)
             localStorage.setItem("emailid", json.email_id)
             localStorage.setItem("userid", json.user_id)
             if (json.status == true) {
@@ -58,6 +79,12 @@ function UserLogin() {
                     location.href = "homepage.html";
                 })
                
+            }else{
+                 swal(
+                     'Error!',
+                     json.message,
+                     'error',
+                 )
             }
         });
 }
@@ -69,7 +96,7 @@ function Loguout(){
         'LogOut Success !',
         'success'
     ).then((value) => {
-        location.href = "index(2).html"
+        location.href = "index.html"
     })
   
 }
@@ -77,7 +104,7 @@ function Loguout(){
 function UserRegister() {
     var emailid = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    console.log(username, emailid, password);
+    console.log( emailid, password);
     fetch("http://127.0.0.1:5000/userregister", {
         // Adding method type
         method: "POST",
@@ -95,9 +122,15 @@ function UserRegister() {
         .then((response) => response.json())
         // Displaying results to console
         .then((json) => {
-            alert(json.message);
+           
             if (json.status == true) {
-                location.href = "seller.html";
+                swal(
+                    'Success',
+                    json.message,
+                    'success'
+                ).then((value) => {
+                    location.href = "userlogin.html";
+                })
             }
         });
 }
@@ -125,56 +158,25 @@ function Register() {
         .then((response) => response.json())
         // Displaying results to console
         .then((json) => {
-            alert(json.message);
-            if (json.status == true) {
-                location.href = "seller.html";
-            }
-        });
-}
-
-function ProductAdd() {
-    var productname = document.getElementById("pname").value;
-    var productdescrb = document.getElementById("pdescrb").value;
-    var categoryvalue = document.getElementById("category").value; 
-    var productdescrb = document.getElementById("pdescrb").value;
-    var url = document.getElementById("purl").value;
-    var productprice = document.getElementById("price").value;
-    
-    console.log(category);
-    fetch("http://127.0.0.1:5000/sellerform", {
-        // Adding method type
-        method: "POST",
-        // Adding body or contents to send
-        body: JSON.stringify({
-            productname: productname,
-            productdescrb: productdescrb,
-            imgurl: url,
-            productprice: productprice,
-            category: categoryvalue 
-        }),
-        // Adding headers to the request
-        headers: {
-            "Content-type": "application/json; charset=UTF-8",
-        },
-    })
-        // Converting to JSON
-        .then((response) => response.json())
-        // Displaying results to console
-        .then((json) => {
-            
+          
             if (json.status == true) {
                 swal(
                     'Success',
                     json.message,
                     'success'
-                )
-                setTimeout(() => {
-                    location.href = "index(2).html";
-                }, 2000);
-               
+                ).then((value) => {
+                    location.href = "seller.html";
+                })
+            }else{
+                 swal(
+                     'Error!',
+                      json.message,
+                     'error',
+                 )
             }
         });
 }
+
 
 function Load_Tshirts(categoryGET) {
     console.log(categoryGET)
@@ -193,6 +195,8 @@ function Load_Tshirts(categoryGET) {
             Maindata = json.data;
             let htmlCode = ``;
             Maindata.forEach(function (singleproductdata) {
+                   if (countTshirts <= 4) {
+                       countTshirts = countTshirts + 1;
                 htmlCode =
                     htmlCode +
                     `
@@ -218,7 +222,7 @@ function Load_Tshirts(categoryGET) {
         </li>
     </ul>
   `;
-            });
+            }});
             const ProductCards = document.querySelector(".tshirts");
             ProductCards.innerHTML = htmlCode;
         });
@@ -247,8 +251,10 @@ function UserAddcart(productid) {
                     'Success',
                     json.message,
                     'success'
-                )
-                GetCart_Homepage()
+                ).then((value) => {
+                    location.href = "homepage.html"
+                })
+               
             });
     } else {
         swal(
@@ -313,11 +319,8 @@ function Load_Shirts(categoryGET) {
             Maindata = json.data;
             let htmlCode = ``;
             Maindata.forEach(function (singleproductdata) {
-
-                // document.getElementById("newproductname").innerHTML = singleproductdata.productname;
-                // document.getElementById("newproductimg").src = singleproductdata.productimgurl;
-                // document.getElementById("newproductprice").innerHTML = singleproductdata.productprice;
-
+                // if (countshirts <= 4) {
+                // countshirts = countshirts + 1;
                 htmlCode =
                     htmlCode +
                   `
@@ -345,13 +348,120 @@ function Load_Shirts(categoryGET) {
 
   `;
             }); 
+            
             const ProductCards = document.querySelector(".newproducts");
-            const UniqueShirts = document.querySelector(".uniqueshirts");
             ProductCards.innerHTML = htmlCode;
-            UniqueShirts.innerHTML = htmlCode;
         });
+    
 }
 
+function Load_JEANS(categoryGET) {
+    console.log(categoryGET)
+    fetch("http://127.0.0.1:5000/Porducts", {
+            method: "POST",
+            body: JSON.stringify({
+                category: categoryGET
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8",
+            },
+        })
+        .then((response) => response.json())
+        .then((json) => {
+            console.log(json);
+            Maindata = json.data;
+            let htmlCode = ``;
+            Maindata.forEach(function (singleproductdata) {
+                if (countshirts <= 4) {
+                    countshirts = countshirts + 1;
+                    htmlCode =
+                        htmlCode +
+                        `
+    <ul class="cards col">
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img  src="${singleproductdata.productimgurl}">
+                 <div class="star" style="text-align:center">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="card_content">
+                    <h2 class="card_title" style="overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;">${singleproductdata.productname}</h2>
+                    <br>
+                    <p class="card_text" style="overflow: hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;">Price $${singleproductdata.productprice}</p>
+                    <button class="btn1 card_btn" onclick="UserAddcart(${singleproductdata.product_id})"><a style="text-decoration: none;">Add Cart &nbsp; <i style="color: white;font-size:20px"
+                class="fa fa-shopping-cart" aria-hidden="true"></i></a></button>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+  `;
+                }
+            });
+
+            const Jeanspants = document.querySelector(".jeanspants");
+            Jeanspants.innerHTML = htmlCode;
+        });
+
+}
+
+function Load_JEANSHomepage(categoryGET) {
+    console.log(categoryGET)
+    fetch("http://127.0.0.1:5000/Porducts", {
+            method: "POST",
+            body: JSON.stringify({
+                category: categoryGET
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8",
+            },
+        })
+        .then((response) => response.json())
+        .then((json) => {
+            console.log(json);
+            Maindata = json.data;
+            let htmlCode = ``;
+            Maindata.forEach(function (singleproductdata) {
+                if (countjeans <= 4) {
+                    countjeans = countjeans + 1;
+                    htmlCode =
+                        htmlCode +
+                        `
+    <ul class="cards col">
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img  src="${singleproductdata.productimgurl}">
+                 <div class="star" style="text-align:center">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="card_content">
+                    <h2 class="card_title" style="overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;">${singleproductdata.productname}</h2>
+                    <br>
+                    <p class="card_text" style="overflow: hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;">Price $${singleproductdata.productprice}</p>
+                    <button class="btn1 card_btn" onclick="UserAddcart(${singleproductdata.product_id})"><a style="text-decoration: none;">Add Cart &nbsp; <i style="color: white;font-size:20px"
+                class="fa fa-shopping-cart" aria-hidden="true"></i></a></button>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+  `;
+                }
+            });
+
+            const Jeanspants = document.querySelector(".jeanspantshome");
+            Jeanspants.innerHTML = htmlCode;
+        });
+
+}
 
 
 function Load_Tops(categoryGET) {
@@ -371,6 +481,8 @@ function Load_Tops(categoryGET) {
             Maindata = json.data;
             let htmlCode = ``;
             Maindata.forEach(function (singleproductdata) {
+                 if (counttops <= 4) {
+                     counttops = counttops + 1;
                 htmlCode =
                     htmlCode +
                     `
@@ -396,7 +508,7 @@ function Load_Tops(categoryGET) {
         </li>
     </ul>
   `;
-            });
+            }});
             const ProductCards = document.querySelector(".womentops");
             ProductCards.innerHTML = htmlCode;
         });
@@ -464,6 +576,7 @@ function GetCart() {
     </ul>
   `;
             });
+           
             const ProductCards = document.querySelector(".newproducts");
             ProductCards.innerHTML = htmlCode;
 
@@ -487,6 +600,7 @@ function GetCart_Homepage() {
         .then((response) => response.json())
         .then((json) => {
             localStorage.setItem("Addcart", json.data.length)
+            console.log(json.data)
         });
 
 }
@@ -536,8 +650,7 @@ function Remove(productid) {
             onclick:"Okay"
         },
         dangerMode: true,
-    })
-        .then((willDelete) => {
+    }).then((willDelete) => {
             if (willDelete) {
                 fetch("http://127.0.0.1:5000/UserRemovecart", {
                     method: "POST",
@@ -555,7 +668,9 @@ function Remove(productid) {
                         {
 
                             if (json.status == true) {
+                                
                                 GetCart()
+                                GetCart_Homepage()
                             }
 
                         }

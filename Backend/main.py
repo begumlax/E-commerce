@@ -6,12 +6,13 @@ import psycopg2.extras
 import re
 
 
-#Local Database connection
+Local Database connection
 DB_HOST = "localhost"
 DB_NAME = "postgres"
 DB_USER = "postgres"
 DB_PASS = "123456"
-
+  
+ 
 
 
 # Connecting postgresql database to the python
@@ -37,9 +38,9 @@ def login():
             cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
             # query to fetch the user details
             sql = "SELECT * FROM sellers WHERE email_id ='{0}'".format(_emailid)
-    
             cursor.execute(sql)
             row = cursor.fetchone()
+          
             try:
                 email = row['email_id']
                 username = row['username']
@@ -56,19 +57,18 @@ def login():
             if row:
                 if (_password==password):
                     cursor.close()
-                    resp = jsonify({'message': 'Login Successfully',
-                                   'user_id': user_id, 'email_id': email,'username':username, 'status': True})
+                    resp = jsonify({'message': 'Login Successfully','seller_id': user_id, 'email_id': email,'username':username, 'status': True})
                     resp.status_code = 200
                     return resp
 
-                # for invalid password
+                # for invalid password 
                 else:
                     resp = jsonify(
                         {'message': 'Please enter correct password', 'status': False})
                     resp.status_code = 200
                     return resp
 
-            # invalid email
+            # invalid email 
             else:
                 resp = jsonify(
                     {'message': 'Enter valid email', 'status': False})
@@ -96,7 +96,7 @@ email_valid = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
 def register():
     _json = request.json
     # requesting values from the user to login
-    _username =  _json['email_id']
+    _username =  _json['username']
     _emailid = _json['email_id']
     _password = _json['password']  
 
@@ -155,12 +155,12 @@ def sellerform():
     _imageurl = _json['imgurl']  
     _price = _json['productprice']  
     _category = _json['category']
-
+    _sellerid = _json['addedby']
     if request.method == 'POST':
         if _name and _descrb and _imageurl and _price :
             cursor = conn.cursor()
-            sql = '''INSERT INTO productdetails (productname , productdescrb , imgurl , productprice , category)  VALUES ('{0}' ,'{1}' ,'{2}','{3}','{4}')'''.format(
-                            _name, _descrb, _imageurl,_price,_category)
+            sql = '''INSERT INTO productdetails (productname , productdescrb , imgurl , productprice , category,addedby)  VALUES ('{0}' ,'{1}' ,'{2}','{3}','{4}','{5}')'''.format(
+                            _name, _descrb, _imageurl,_price,_category,_sellerid)
            
             cursor.execute(sql)
                     
@@ -191,12 +191,12 @@ def sellerform():
 
 @sellers.route('/Porducts', methods=['POST', 'GET'])
 def productlists():
-    _json = request.json
+    _json = request.json 
     _category =  _json['category']
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     # validating the received values
-    if request.method == 'POST':
-   # Bad request of invalid method
+    if request.method == 'POST': 
+   # Bad request of invalid method 
             cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
             if(_category=="Tshirts"):
                 sql = "SELECT * FROM productdetails WHERE category='Tshirts'" 
@@ -204,13 +204,16 @@ def productlists():
                 sql = "SELECT * FROM productdetails WHERE category='Womenstop'"  
             if(_category=="Mensshirt"):
                 sql = "SELECT * FROM productdetails WHERE category='Mensshirt'" 
+            if(_category=="Jeanspants"):
+                sql = "SELECT * FROM productdetails WHERE category='Jeanspants'" 
+            if(_category=="kurta"):
+                sql = "SELECT * FROM productdetails WHERE category='kurta'" 
             cursor.execute(sql)
-            row = cursor.fetchall()
+            row = cursor.fetchall() 
             # checking the token access and reseting the password
             if row:
                 # if 'username' in session:
                 if row != None:
-                    conn.commit()
                     cursor.close()
                     output = []
                     for s in row:
@@ -228,31 +231,6 @@ def productlists():
     elif request.method == 'POST':
         return jsonify({'message': 'Bad Request! , Please check your request method', 'status': False})
 
-
-@sellers.route('/Addtocart', methods=['POST', 'GET'])
-def AddtoCart():
-    _json = request.json
-    _productid =  _json['product_id']
-    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    if request.method == 'POST':
-        if _productid:
-            cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-            sql = "UPDATE productdetails SET addcart = 'True' WHERE product_id='{0}';".format(_productid) 
-            cursor.execute(sql)
-            conn.commit()
-            cursor.close()
-            return jsonify({'message': 'Added to cart Successfully', 'status': True})
-
-     
-        else:
-            return jsonify({'message': 'Product ID is missing', 'status': False})
-        
-            # checking the token access and reseting the password
-           
-
-    # For invalid method
-    elif request.method == 'POST':
-        return jsonify({'message': 'Bad Request! , Please check your request method', 'status': False})
 
 @sellers.route('/Buynow', methods=['POST', 'GET'])
 def Buynow():
@@ -321,41 +299,48 @@ def RemoveCart():
         return jsonify({'message': 'Bad Request! , Please check your request method', 'status': False})
 
 
-@sellers.route('/GetcartIteams', methods=['POST', 'GET'])
-def GetCart():
+@sellers.route('/SellerProductsList', methods=['POST', 'GET'])
+def ProductsList():
     _json = request.json
+    _sellerid =  _json['seller_id']
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    # validating the received values
-    if request.method == 'GET':
-   # Bad request of invalid method
+    if request.method == 'POST':
+        if _sellerid:
             cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-            sql = "SELECT * FROM productdetails WHERE addcart='True'" 
+            sql = "SELECT *  FROM productdetails WHERE addedby='{0}'".format(_sellerid) 
             cursor.execute(sql)
             row = cursor.fetchall()
-            # checking the token access and reseting the password
+            print(row) 
             if row:
-                # if 'username' in session:
                 if row != None:
                     conn.commit()
                     cursor.close()
                     output = []
+                    count=0
                     for s in row:
+                        count = count+1
                         output.append({"product_id": s[0],
                                        "productdescription": s[2],
                                        "productname": s[1],
                                        "productprice": s[3],
-                                       "productimgurl":s[4]
+                                       "productimgurl":s[4],
+                                       "productcategory":s[5]
                                        })
 
                     # print(output)
-                    return {"data" : output }
+                    return {"data" : output,"productscount":count,"status":True}
             else:
-                return jsonify({'message': 'Add to cart is empty , Add your favorite items first.', 'status': False})
+                return {"message" : "SllerId not found","status":False}
 
+
+     
+        else:
+            return jsonify({'message': 'Product ID is missing', 'status': False})
+        
+            # checking the token access and reseting the password
+           
 
     # For invalid method
     elif request.method == 'POST':
         return jsonify({'message': 'Bad Request! , Please check your request method', 'status': False})
-
-
 

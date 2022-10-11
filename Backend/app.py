@@ -4,6 +4,7 @@ from flask import Flask
 from flask_cors import CORS
 from main import sellers
 from user import users
+from producttrack import producttrackCustomer
 from flask_mail import Mail, Message
 
 
@@ -13,6 +14,7 @@ CORS(app)
 
 app.register_blueprint(sellers)
 app.register_blueprint(users)
+app.register_blueprint(producttrackCustomer)
 
 if __name__ == '__main__':
      app.run(debug=True)

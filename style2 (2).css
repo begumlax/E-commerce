@@ -57,6 +57,7 @@ body::-webkit-scrollbar-thumb {
 }
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden !important;
 }
 
 

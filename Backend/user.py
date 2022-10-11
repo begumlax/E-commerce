@@ -31,7 +31,7 @@ def login():
                 user_id = row['user_id']
                 password = row['password']
             except:
-                pass
+                pass 
             if (row == None):
                 resp = jsonify(
                     {'message': 'Entered email id does not exist, Please register', 'status': False})
