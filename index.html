@@ -22,100 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <link rel="stylesheet" href="style2 (2).css">
-
-  <style>
-    .main {
-      max-width: 1200px;
-      margin: 10px !important;
-    }
-
-
-
-    img {
-      height: 300px;
-      max-width: 250px;
-      vertical-align: middle;
-    }
-
-    .btn1 {
-      color: #ffffff;
-      padding: 0.8rem;
-      font-size: 14px;
-      text-transform: uppercase;
-      border-radius: 4px;
-      font-weight: 400;
-      display: block;
-      width: 100%;
-      cursor: pointer;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: transparent;
-    }
-
-    .btn1:hover {
-      background-color: rgba(255, 255, 255, 0.12);
-    }
-
-    .cards {
-      display: contents;
-
-      flex-wrap: wrap;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .cards_item {
-      display: flex;
-      padding: 1rem;
-    }
-
-    @media (min-width: 40rem) {
-      .cards_item {
-        width: 50%;
-      }
-    }
-
-    @media (min-width: 56rem) {
-      .cards_item {
-        width: 19.3333%;
-        padding: 10px;
-      }
-    }
-
-    .card {
-      background-color: #343a40 !important;
-      ;
-      border-radius: 0.25rem;
-      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .card_content {
-      padding: 1rem;
-      background: #343a40 !important;
-      /* background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%); */
-    }
-
-    .card_title {
-      color: #ffffff;
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: capitalize;
-      margin: 0px;
-    }
-
-    .card_text {
-      color: #ffffff;
-      font-size: 0.875rem;
-      line-height: 1.5;
-      margin-bottom: 1.25rem;
-      font-weight: 400;
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
   <!------------>
 </head>
 
@@ -123,7 +30,8 @@
   <!--NAVIGATION-->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
     <div class="container">
-      <h1>ShoPperZ</h1>
+      <h1>Sho<span style="color: coral;">Pp</span>erZ </h1><span style="font-size:8px;margin-bottom:8px">Make <br> Ur
+        <br> Shoping eAsY </span>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span><i id="bar" class="fa fa-tasks"></i></span>
@@ -140,55 +48,84 @@
           </li>
           <div class="dropdown">
             <li class="nav-item">
-              <button a class="nav-link" href="shop(4).html "
-                style="background-color:white;margin-top: 10px;">Shop</a></button>
+              <a> <button class="nav-link" style="background-color:white;margin-top: 10px;">Shop</button></a>
             </li>
-            <div class="dropdown-content">
+            <div id="SHOWOPTIONS" class="dropdown-content">
               <div class="row">
                 <div class="column">
-                  <h3>MEN</h3>
-                  <a href="shirts.html">Shirts</a>
-                  <a href="#">T-shirts</a>
-                  <a href="#">Jeans</a>
+                  <h3>MEN <span><img style="width:25px;height:25px;margin-bottom:5px" src="./images/mens.png"
+                        alt=""></span></h3>
+                  <a href="mensshirts.html">Shirts</a>
+                  <a href="menstshirts.html">T-shirts</a>
+                  <a href="mensjeans.html">Jeans</a>
+
                 </div>
                 <div class="column">
-                  <h3>WOMEN</h3>
-                  <a href="#">Kurta</a>
-                  <a href="#">Dresses</a>
-                  <a href="#">Tops</a>
+                  <h3>WOMEN<span><img style="width:30px;height:30px;margin-bottom:5px" src="./images/womens2.png"
+                        alt=""></span></h3>
+                  <a href="womenskurta.html">Kurta</a>
+                  <a href="womensdresses.html">Dresses</a>
+                  <a href="womenstops.html">Tops</a>
+
                 </div>
                 <div class="column">
-                  <h3>KIDS</h3>
-                  <a href="#">Shirts</a>
-                  <a href="#">Jeans</a>
-                  <a href="#">Dresses</a>
+                  <h3>KIDS<span><img style="width:25px;height:25px;margin-bottom:5px" src="./images/kids.png"
+                        alt=""></span></h3>
+                  <a href="kidsshirts.html">Shirts</a>
+                  <a href="kidsjeans.html">Jeans</a>
+                  <a href="kidsdresses.html">Dresses</a>
+
                 </div>
+                <div class="column">
+                  <h3>GADGETS<span><img style="width:25px;height:25px;margin-bottom:5px" src="./images/gadgets.png"
+                        alt=""></span></h3>
+                  <a href="laptops.html">Laptops</a>
+                  <a href="mobiles.html">Mobiles</a>
+                  <a href="electronicdevices.html">Electronic Devices</a>
+
+                </div>
+                <div class="column">
+                  <h3>BEAUTY<span><img style="width:25px;height:25px;margin-bottom:5px" src="./images/beauty.png"
+                        alt=""></span></h3>
+                  <a href="mensbeauty.html">Mens</a>
+                  <a href="womensbeauty.html">Womens</a>
+                  <a href="naturalproducts.html">Natural Producs</a>
+
+                </div>
+                <div class="column">
+                  <h3>GIFTS<span><img style="width:25px;height:25px;margin-bottom:5px" src="./images/gifts.png"
+                        alt=""></span></h3>
+                  <a href="birthdaygifts.html">Bithday</a>
+                  <a href="partyproduct.html">Party</a>
+                  <a href="marraigeproduct.html">Marraige</a>
+
+                </div>
+                <div class="column">
+                  <h3>SHOES<span><img style="width:25px;height:25px;margin-bottom:5px" src="./images/shoes.png"
+                        alt=""></span></h3>
+                  <a href="mensshoes.html">Mens</a>
+                  <a href="womensshoes.html">Womens</a>
+                  <a href="kidsshoes.html">Kids</a>
+
+                </div>
+
               </div>
             </div>
           </div>
 
           <li class="nav-item">
-            <a class="nav-link" style="margin-top: 10px;" href="seller.html">Seller</a>
+            <a class="nav-link" type="button" class="btn btn-info btn-round" data-toggle="modal"
+              data-target="#loginModal" style="margin-top: 10px;cursor:pointer">Login </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="margin-top: 10px;cursor:pointer" type="button" class="btn btn-info btn-round"
+              data-toggle="modal" data-target="#registerModal">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="margin-top: 10px;cursor:pointer" type="button" class="btn btn-info btn-round"
+              href="#Becomeseller">Seller</a>
           </li>
 
-          <div class="dropdown">
-            <li class="nav-item">
-              <i class="fa fa-user" style="margin-top: 10px;font-size:30px;padding-left:40px" aria-hidden="true"></i>
-
-            </li>
-
-            <div class="dropdown-content" style="width:100px !important;height:130px;margin-left:1230px;">
-
-              <div class="column" style="height: 130px;">
-                <a href="userlogin.html"> Login</a>
-                <a href="userregister.html"> Register</a>
-              </div>
-
-            </div>
-          </div>
-          <!-- <li class="nav-item" >
-            <i class="fa fa-user"  style="margin-top: 10px;font-size:30px;padding-left:40px" aria-hidden="true"></i>
-          </li> -->
           <li class="nav-item">
             <a href="cart.html">
               <i style="color: black;margin-top: 10px;font-size:30px;padding-left:20px" class="fa fa-shopping-cart"
@@ -199,12 +136,12 @@
     </div>
   </nav>
 
-  <section id="home">
+  <section id="home" style="background-image: url('./images/1.jpg');">
     <div class="container">
       <h5>NEW ARRIVAL</h5>
       <h1><span>Best Price</span> This Year</h1>
       <p>Shoomatic offers your very comfortable time<br> on walking and exercises</p>
-      <a href="#" style="color: black;"><button style="color: black;margin-left:90px">Shop
+      <a href="#SHOPNOW" style="color: black;"><button style="color: black;margin-left:90px">Shop
           Now</button></a>
     </div>
   </section>
@@ -236,20 +173,19 @@
     <div class="row p-0 m-0">
       <div class="one col-lg-4 col-md-12 col-12p-0">
         <img class="img-fluid"
-          src="https://assets.ajio.com/medias/sys_master/root/20211026/PmjJ/6176fd75aeb2690110a887bd/dnmx_red_zip-front_jacket_with_insert_pockets.jpg"
+          src="https://assets.ajio.com/medias/sys_master/root/20220528/VWa3/62913dfaf997dd03e23fe607/urbano_fashion_green_leaf_print_crew-neck_t-shirt.jpg"
           alt="">
         <div class="details">
           <h2 style="color: black;margin-left:150px">Extreme Mens Shirts</h2>
 
-          <a href="#" style="color: blak;"> <button style="color: black;margin-left:190px"
-              class="text-uppercase">Shop Now</button></a>
+          <a href="#SHOPNOW"> <button style="color: black;margin-left:190px" class="text-uppercase">Shop
+              Now</button></a>
         </div>
       </div>
 
       <div class="one col-lg-4 col-md-12 col-12p-0">
         <img class="img-fluid"
-          src="https://assets.ajio.com/medias/sys_master/root/20211027/7Znh/61789fceaeb2690110abb969/znx_clothing_multicoloured_floral_print_wrap_top.jpg"
-          alt="">
+          src="https://res.cloudinary.com/djqnvvxjd/image/upload/v1584015614/jkamk5yfkg7wjkieazpo.jpg" alt="">
         <div class="details">
           <h2>Awesome Printed Tops</h2>
           <button class="text-uppercase">Shop Now</button>
@@ -258,7 +194,7 @@
 
       <div class="one col-lg-4 col-md-12 col-12p-0">
         <img class="img-fluid"
-          src="https://assets.ajio.com/medias/sys_master/root/20220502/SL5j/626feee1f997dd03e28e2343/r_k_maniyar_pink_cartoon_fit_and_flare_dress.jpg"
+          src="https://images.pexels.com/photos/1620788/pexels-photo-1620788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt="">
         <div class="details">
           <h2 style="color: black;margin-right:100px">Kids Cloths Up To 50% off</h2>
@@ -269,15 +205,16 @@
     </div>
   </section>
 
-  <section id="featured" class="my-5 pb-5">
+  <section id="SHOPNOW" class="my-5 pb-5">
     <div class="container text-center mt-5 py-5 ">
       <h3>Our Feature</h3>
       <hr class="mx-auto">
       <p>Here you can check out our new products with fair price on Shopperz.</p>
     </div>
+
     <!----------------------------NEW PRODUCTS------------------------>
     <div class="newproducts row" style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
-
+      <div id="loading"></div>
     </div>
     <!----------------------------------------------------------------------->
   </section>
@@ -298,7 +235,7 @@
     </div>
     <!-----------------------T SHIRTS---------------------------------------------------------->
     <div class="row tshirts" style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
-
+      <div id="loading"></div>
     </div>
     <!----------------------------------------------------------------------------->
   </section>
@@ -311,7 +248,7 @@
     </div>
     <!---------------------------------WOMENS TOPS-------------------------------------->
     <div class="row womentops" style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
-
+      <div id="loading"></div>
     </div>
     <!-------------------------------------------------------------------------------------->
   </section>
@@ -324,12 +261,12 @@
     </div>
     <!---------------------JEANS PANTS-------------------------->
     <div class="row jeanspantshome" style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
-
+      <div id="loading"></div>
     </div>
     <!------------------------------------------------------------------->
   </section>
 
-  <footer class="mt-5 py-5">
+  <footer>
     <div class="row container mx-auto pt-5">
       <div class="footeer-one col-lg-3 col-md-6 col-12">
         <h1 style="color: coral;">ShoPperZ</h1>
@@ -364,22 +301,27 @@
           <p>mail@example.com</p>
         </div>
       </div>
-      <div class="footeer-one col-lg-3 col-md-6 col-12">
-        <h5 class="pb-2">Instagram</h5>
-        <div class="row">
-          <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\1.jpg" alt="">
-          <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\2.jpg" alt="">
-          <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\3.jpg" alt="">
-          <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\4.jpg" alt="">
-          <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\5.jpg" alt="">
+      <div id="Becomeseller" class="footeer-one col-lg-3 col-md-6 col-12">
+        <h5 class="pb-2">Become a Seller</h5>
+        <div>
+          <a type="button" class="btn  btn-round" data-toggle="modal" data-target="#loginModalforseller"
+            style="margin-top: 10px;cursor:pointer">
+            <h6 class="text-uppecase">Login &nbsp;<i class="fas fa-user-check" aria-hidden="true"></i></h6>
+          </a>
+          <!-- <p>123 STREET NAME, CITY, US</p> -->
+        </div>
+        <br>
+        <div>
+          <a type="button" class="btn  btn-round" data-toggle="modal" data-target="#registerModalforseller"
+            style="margin-top: 10px;cursor:pointer">
+            <h6 class="text-uppecase">Register &nbsp;<i class="fas fa-user-plus" aria-hidden="true"></i></h6>
+          </a>
         </div>
       </div>
     </div>
     <div class="copyright">
       <div class="row container">
-        <div class="col-lg-3 col-md-6 col-12 mb-4">
-          <img src="C:\Users\Basheer\Desktop\img\payment.png" alt="">
-        </div>
+
         <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
           <p>rymo eCommerce @ 2021. All Rights Reserves</p>
         </div>
@@ -392,17 +334,324 @@
     </div>
   </footer>
 
+  <div class="modal fade" id="loginModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
 
+        <div class="modal-header border-bottom-0">
+          <div class="form-title text-center">
+            <h4 style="margin-left:100px">
+              LogIn</h4><img src="./images/logoforwebsite.png"
+              style="height: 60px !important;width:250px !important;border-radius:60px;margin-left:100px" alt="">
+          </div>
+          <div class="close-box" style="background-color: coral;" data-dismiss="modal">
+            <i class="fa fa-times" style="font-size:20px;"></i>
+          </div>
+        </div>
+        <div class="modal-body">
+
+          <div class="d-flex flex-column text-center">
+            <form>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"> <i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="email" placeholder="Your Email..." aria-label="email"
+                  aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                </div>
+                <input type="password" class="form-control" id="password" placeholder="Your Password..."
+                  aria-label="password" aria-describedby="basic-addon1">
+              </div>
+              <button type="button" style="background-color: coral !important;" class="btn btn-block btn-round"
+                onclick="UserLogin()">Login</button>
+            </form>
+            <br>
+            <div class="text-center text-muted delimiter">or use a social network</div>
+            <br>
+            <div class="d-flex  row justify-content-center social-buttons">
+              <button type="button" style="margin-right: 10px !important;" class="btn btn-secondary btn-round"
+                title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </button>
+              <button type="button" style="margin-right: 10px !important;" class="btn btn-secondary btn-round"
+                data-toggle="tooltip" data-placement="top" title="Facebook">
+                <i class="fab fa-facebook"></i>
+              </button>
+
+              <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top"
+                title="Linkedin">
+                <i class="fab fa-linkedin"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="registerModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <div class="form-title text-center">
+            <h4 style="margin-left:100px">
+              Register</h4><img src="./images/logoforwebsite.png"
+              style="height: 60px !important;width:250px !important;border-radius:60px;margin-left:100px" alt="">
+          </div>
+          <div class="close-box" style="background-color: coral;" data-dismiss="modal">
+            <i class="fa fa-times" style="font-size:20px;"></i>
+          </div>
+        </div>
+        <div class="modal-body">
+
+          <div class="d-flex flex-column text-center">
+            <form>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"> <i class="fas fa-user-circle"></i></span>
+                </div>
+                <input type="text" class="form-control" id="username" placeholder="Your Username..."
+                  aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="email" placeholder="Your email address..."
+                  aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                </div>
+                <input type="password" class="form-control" id="password" placeholder="Your password..."
+                  aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+
+              <button type="button" style="background-color: coral !important;" class="btn btn-block btn-round"
+                onclick="UserRegister()">Register</button>
+            </form>
+            <br>
+            <div class="text-center text-muted delimiter">or use a social network</div>
+            <br>
+            <div class="d-flex  row justify-content-center social-buttons">
+              <button type="button" style="margin-right: 10px !important;" class="btn btn-secondary btn-round"
+                title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </button>
+              <button type="button" style="margin-right: 10px !important;" class="btn btn-secondary btn-round"
+                data-toggle="tooltip" data-placement="top" title="Facebook">
+                <i class="fab fa-facebook"></i>
+              </button>
+
+              <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top"
+                title="Linkedin">
+                <i class="fab fa-linkedin"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="modal fade" id="loginModalforseller" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <div class="form-title text-center">
+            <h4 style="margin-left:100px">
+              LogIn As a Seller</h4><img src="./images/logoforwebsite.png"
+              style="height: 60px !important;width:250px !important;border-radius:60px;margin-left:100px" alt="">
+          </div>
+          <div class="close-box" style="background-color: coral;" data-dismiss="modal">
+            <i class="fa fa-times" style="font-size:20px;"></i>
+          </div>
+        </div>
+        <div class="modal-body">
+
+          <div class="d-flex flex-column text-center">
+            <form>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"> <i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="selleremail" placeholder="Your Email..." aria-label="email"
+                  aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                </div>
+                <input type="password" class="form-control" id="sellerpassword" placeholder="Your Password..."
+                  aria-label="password" aria-describedby="basic-addon1">
+              </div>
+              <button type="button" style="background-color: coral !important;" class="btn btn-block btn-round"
+                onclick="SellerLogin()">Login</button>
+            </form>
+            <br>
+            <div class="text-center text-muted delimiter">or use a social network</div>
+            <br>
+            <div class="d-flex  row justify-content-center social-buttons">
+              <button type="button" style="margin-right: 10px !important;" class="btn btn-secondary btn-round"
+                title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </button>
+              <button type="button" style="margin-right: 10px !important;" class="btn btn-secondary btn-round"
+                data-toggle="tooltip" data-placement="top" title="Facebook">
+                <i class="fab fa-facebook"></i>
+              </button>
+
+              <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top"
+                title="Linkedin">
+                <i class="fab fa-linkedin"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="registerModalforseller" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <div class="form-title text-center">
+            <h4 style="margin-left:100px">
+              Register As a Seller</h4><img src="./images/logoforwebsite.png"
+              style="height: 60px !important;width:250px !important;border-radius:60px;margin-left:100px" alt="">
+          </div>
+          <div class="close-box" style="background-color: coral;" data-dismiss="modal">
+            <i class="fa fa-times" style="font-size:20px;"></i>
+          </div>
+        </div>
+        <div class="modal-body">
+
+          <div class="d-flex flex-column text-center">
+            <form>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"> <i class="fas fa-user-circle"></i></span>
+                </div>
+                <input name="username" type="text" class="form-control" id="Susername" placeholder="Your Username..."
+                  aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                </div>
+                <input name="email_id" type="text" class="form-control" id="Semail" placeholder="Your email address..."
+                  aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                </div>
+                <input name="password" type="password" class="form-control" id="Spassword"
+                  placeholder="Your password..." aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <!-- <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-image"></i></span>
+                </div>
+                <button type="button" class="btn btn-dark form-control" onclick="document.getElementById('profileimg').click()"
+      id="photo_btn">Select Image</button>
+                <input type="file" class="form-control" name="profileimg" id="Sprofileimg" required>
+              </div> -->
+
+            </form>
+            <button style="background-color: coral !important;" class="btn btn-block btn-round"
+              onclick="Register()">Register</button>
+            <br>
+            <div class="text-center text-muted delimiter">or use a social network</div>
+            <br>
+            <div class="d-flex  row justify-content-center social-buttons">
+              <button type="button" style="margin-right: 10px !important;" class="btn btn-secondary btn-round"
+                title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </button>
+              <button type="button" style="margin-right: 10px !important;" class="btn btn-secondary btn-round"
+                data-toggle="tooltip" data-placement="top" title="Facebook">
+                <i class="fab fa-facebook"></i>
+              </button>
+
+              <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top"
+                title="Linkedin">
+                <i class="fab fa-linkedin"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="JS/index.js"></script>
+  <script src="/JS/products.js"></script>
+  <script src="/JS/seller.js"></script>
+  <script src="/JS/user.js"></script>
+  <script>
+    var cycle = 0;
+    var allBackgrounds = [
+      './images/2.jpg',
+      './images/3.jpg',
+      './images/4.jpg',
+      './images/5.jpg',
+      './images/1.jpg'
+    ];
+
+
+    setInterval(function () {
+      if (cycle < 5) {
+        for (let i = 0; i < allBackgrounds.length; i++) {
+          document.getElementById('home').style.backgroundImage = "url('" + allBackgrounds[cycle] + "')";
+        }
+
+        cycle += 1;
+      } else {
+        cycle = 0;
+      }
+    }, 2000);
+  </script>
   <script>
     window.onload = function () {
+
       Load_Tshirts('Tshirts')
       Load_Tops('Womenstop')
       Load_Shirts('Mensshirt')
       Load_JEANSHomepage('Jeanspants')
-      
+
     }
   </script>
-  <script src="seller.js"></script>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
   </script>

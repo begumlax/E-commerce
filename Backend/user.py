@@ -21,9 +21,10 @@ def login():
         if _emailid and _password:
             # check user exists
             cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+            abort="rollback"
+            cursor.execute(abort)
             # query to fetch the user details
             sql = "SELECT * FROM users WHERE email_id ='{0}'".format(_emailid)
-    
             cursor.execute(sql)
             row = cursor.fetchone()
             try:
@@ -88,6 +89,8 @@ def register():
         if _password and _emailid :
             if(re.search(email_valid, _emailid)):
                 cursor = conn.cursor()
+                abort="rollback"
+                cursor.execute(abort)
                 cursor.execute(
                             "SELECT * FROM users WHERE email_id ='{0}'".format(_emailid))
                         
@@ -132,10 +135,12 @@ def AddtoCart():
     _json = request.json
     _productid =  _json['product_id']
     _emailid =  _json['email_id']
-    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    
     if request.method == 'POST':
         if _productid:
             cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+            abort="rollback"
+            cursor.execute(abort)
             sql = "INSERT INTO usersaddcart (email_id , product_id)  VALUES ('{0}' ,'{1}')".format(_emailid,_productid)
             cursor.execute(sql)
             conn.commit()
@@ -160,16 +165,16 @@ def GetCart():
     _json = request.json
     _email=_json['email_id']
 
-
-    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     # validating the received values
     if request.method == 'POST':
    # Bad request of invalid method
             cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+            abort="rollback"
+            cursor.execute(abort)
             sql = ''' select p.product_id,productname,productdescrb,productprice,category,imgurl,email_id from productdetails p inner join usersaddcart c on p.product_id=c.product_id where email_id='{}'  '''.format(_email)
             cursor.execute(sql)
             row = cursor.fetchall()
-            print(row)
+          
             # checking the token access and reseting the password
             if row:
                 # if 'username' in session:
@@ -201,10 +206,11 @@ def RemoveCart():
     _json = request.json
     _productid =  _json['product_id']
     _email =  _json['email_id']
-    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     if request.method == 'POST':
         if _productid:
             cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+            abort="rollback"
+            cursor.execute(abort)
             sql = "DELETE FROM usersaddcart WHERE product_id ='{0}' AND email_id='{1}'".format(_productid,_email) 
             cursor.execute(sql)
             conn.commit()
@@ -216,8 +222,6 @@ def RemoveCart():
             return jsonify({'message': 'Product ID is missing', 'status': False})
         
             # checking the token access and reseting the password
-           
-
     # For invalid method
     elif request.method == 'POST':
         return jsonify({'message': 'Bad Request! , Please check your request method', 'status': False})

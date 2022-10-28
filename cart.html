@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <link rel="stylesheet" href="style2 (2).css">
+    <link rel="stylesheet" href="/index.css">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <style>
     .main {
@@ -34,7 +34,7 @@
 
     img {
       height: 300px;
-      max-width: 250px;
+      width:100%;
       vertical-align: middle;
     }
 
@@ -136,7 +136,7 @@
             <input type="text" name="" id="search-item" placeholder="search-product" onkeyup="search()">
           </form>
           <li class="nav-item">
-            <a class="nav-link active" style="margin-top: 10px;" href="index.html">Home</a>
+            <a class="nav-link active" style="margin-top: 10px;" href="homepage.html">Home</a>
           </li>
           <div class="dropdown">
             <li class="nav-item">
@@ -147,20 +147,20 @@
               <div class="row">
                 <div class="column">
                   <h3>MEN</h3>
-                  <a href="Men-Shirt.html">Shirts</a>
-                  <a href="mentshirtshop.html">T-shirts</a>
-                  <a href="jeansshop.html">Jeans</a>
+                  <a href="shirts.html">Shirts</a>
+                  <a href="tshirts.html">T-shirts</a>
+                  <a href="jeans.html">Jeans</a>
                 </div>
                 <div class="column">
                   <h3>WOMEN</h3>
-                  <a href="#">Kurta</a>
+                  <a href="kurta.html">Kurta</a>
                   <a href="#">Dresses</a>
-                  <a href="#">Tops</a>
+                  <a href="tops.html">Tops</a>
                 </div>
                 <div class="column">
                   <h3>KIDS</h3>
-                  <a href="kisdshop.html">Shirts</a>
-                  <a href="kjeansshop.html">Jeans</a>
+                  <a href="#">Shirts</a>
+                  <a href="#">Jeans</a>
                   <a href="#">Dresses</a>
                 </div>
               </div>
@@ -179,7 +179,7 @@
           </li>
           <div class="dropdown">
             <li class="nav-item">
-              <span class='badge badge-warning' id='lblCartCount'>5</span>
+              <span class='badge badge-warning' id='lblCartCount'>0</span>
             </li>
 
 
@@ -192,7 +192,9 @@
           <div class="nav-item dropdown">
             <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Settings</a>
             <div class="dropdown-menu">
-              <a onclick="Loguout()" style="cursor:pointer;" class="dropdown-item">LogOut <i
+              <a href="userproductorders.html" style="cursor:pointer;" class="dropdown-item showcolor">Your Orders <i
+                  style="color: black;font-size:20px;" class='fa fa-cart-arrow-down' aria-hidden="true"></i></a>
+              <a onclick="Loguout()" style="cursor:pointer;" class="dropdown-item showcolor">LogOut <i
                   style="color: black;font-size:20px;" class='fa fa-sign-out' aria-hidden="true"></i></a>
 
             </div>
@@ -213,48 +215,16 @@
 
   </section>
 
-  <!-- <section id="cart-container" class="container my-5">
-            <table id="carttable" width="100%">
-                <thead>
-                    <tr>
-                        <td>Remove</td>
-                        <td>Image</td>
-                        <td>Product</td>
-                        <td>Price</td>
-                        <td>Quantity</td>
-                        <td>Total</td>
-                    </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                    <td><img src="https://assets.ajio.com/medias/sys_master/root/20220513/lMsI/627e2197aeb26921af769a0c/-78Wx98H-461646700-olive-MODEL2.jpg" alt=""></td>
-                    <td><h5>T-shirt</h5></td>
-                    <td><h5>$67</h5></td>
-                    <td><input class="w-25 pl-1 " value="1" type="number"></td>
-                    <td><h5>%130.00</h5></td>
-                  </tr>
-                </tbody>
-            </table>
-        </section> -->
-
-
-
-
-
-
-
 
 
   <footer class="mt-5 py-5">
     <div class="row container mx-auto pt-5">
-      <div class="footeer-one col-lg-3 col-md-6 col-12">
+      <!-- <div class="footeer-one col-lg-3 col-md-6 col-12">
         <img src="C:\Users\Basheer\Desktop\img\logo2.png" alt="">
         <p class="pt-3">Fringlla urana Porttior rhoncus dolor purpus luctus venenatics lectus magna
           fringilla diam maecenas ultricies mi eget mauris.
         </p>
-      </div>
+      </div> -->
       <div class="footeer-one col-lg-3 col-md-6 col-12 mb-3">
         <h5 class="pb-2">Featured</h5>
         <ul class="text-uppercase list-unstyled">
@@ -282,22 +252,13 @@
           <p>mail@example.com</p>
         </div>
       </div>
-      <div class="footeer-one col-lg-3 col-md-6 col-12">
-        <h5 class="pb-2">Instagram</h5>
-        <div class="row">
-          <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\1.jpg" alt="">
-          <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\2.jpg" alt="">
-          <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\3.jpg" alt="">
-          <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\4.jpg" alt="">
-          <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\5.jpg" alt="">
-        </div>
-      </div>
+      
     </div>
     <div class="copyright">
       <div class="row container">
-        <div class="col-lg-3 col-md-6 col-12 mb-4">
+        <!-- <div class="col-lg-3 col-md-6 col-12 mb-4">
           <img src="C:\Users\Basheer\Desktop\img\payment.png" alt="">
-        </div>
+        </div> -->
         <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
           <p>rymo eCommerce @ 2021. All Rights Reserves</p>
         </div>
@@ -319,7 +280,8 @@
       GetCart()
     }
   </script>
-  <script src="seller.js"></script>
+  <script src="/JS/products.js"></script>
+  <script src="/JS/user.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
   </script>

@@ -5,8 +5,8 @@
     <title>Order Now</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="ordernow.css">
-    <link rel="stylesheet" href="style2 (2).css">
+    <link rel="stylesheet" href="/CSS/ordernow.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -25,77 +25,104 @@
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="style2 (2).css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!------------>
 </head>
 
 <body>
+   <script>
+       var access = localStorage.getItem("emailid")
+       if (access) {
 
-    <!-- content -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
-        <div class="container">
-            <h1>ShoPperZ</h1>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span><i id="bar" class="fa fa-tasks"></i></span>
-            </button>
+       } else {
+           location.href = "index.html"
+       }
+   </script>
+   <!--NAVIGATION-->
+   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+       <div class="container">
+           <h1>ShoPperZ</h1>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+               aria-label="Toggle navigation">
+               <span><i id="bar" class="fa fa-tasks"></i></span>
+           </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <form action="">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        <input type="text" name="" id="search-item" placeholder="search-product" onkeyup="search()">
-                    </form>
-                    <li class="nav-item">
-                        <a class="nav-link active" style="margin-top: 10px;" href="index.html">Home</a>
-                    </li>
-                    <div class="dropdown">
-                        <li class="nav-item">
-                            <button a class="nav-link" href="shop(4).html "
-                                style="background-color:white;margin-top: 10px;">Shop</a><i
-                                    class="fa fa-caret-down"></i></button>
-                        </li>
-                        <div class="dropdown-content">
-                            <div class="row">
-                                <div class="column">
-                                    <h3>MEN</h3>
-                                    <a href="Men-Shirt.html">Shirts</a>
-                                    <a href="mentshirtshop.html">T-shirts</a>
-                                    <a href="jeansshop.html">Jeans</a>
-                                </div>
-                                <div class="column">
-                                    <h3>WOMEN</h3>
-                                    <a href="#">Kurta</a>
-                                    <a href="#">Dresses</a>
-                                    <a href="#">Tops</a>
-                                </div>
-                                <div class="column">
-                                    <h3>KIDS</h3>
-                                    <a href="kisdshop.html">Shirts</a>
-                                    <a href="kjeansshop.html">Jeans</a>
-                                    <a href="#">Dresses</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ml-auto">
+                   <form action="">
+                       <i class="fa fa-search" aria-hidden="true"></i>
+                       <input type="text" name="" id="search-item" placeholder="search-product" onkeyup="search()">
+                   </form>
+                   <li class="nav-item">
+                       <a class="nav-link active" style="margin-top: 10px;" href="homepage.html">Home</a>
+                   </li>
+                   <div class="dropdown">
+                       <li class="nav-item">
+                           <button a class="nav-link" href="shop(4).html "
+                               style="background-color:white;margin-top: 10px;">Shop</a></button>
+                       </li>
+                       <div class="dropdown-content">
+                           <div class="row">
+                               <div class="column">
+                                   <h3>MEN</h3>
+                                   <a href="shirts.html">Shirts</a>
+                                   <a href="tshirts.html">T-shirts</a>
+                                   <a href="jeans.html">Jeans</a>
+                               </div>
+                               <div class="column">
+                                   <h3>WOMEN</h3>
+                                   <a href="kurta.html">Kurta</a>
+                                   <a href="#">Dresses</a>
+                                   <a href="tops.html">Tops</a>
+                               </div>
+                               <div class="column">
+                                   <h3>KIDS</h3>
+                                   <a href="#">Shirts</a>
+                                   <a href="#">Jeans</a>
+                                   <a href="#">Dresses</a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
 
-                    <li class="nav-item">
+                   <!-- <li class="nav-item">
                         <a class="nav-link" style="margin-top: 10px;" href="seller.html">Seller</a>
-                    </li>
-                    <li class="nav-item">
-                        <i class="fa fa-user" style="margin-top: 10px;font-size:30px;padding-left:40px"
-                            aria-hidden="true"></i>
-                    </li>
-                    <li class="nav-item">
-                        <a href="cart.html"><i style="color: black;margin-top: 10px;font-size:30px;padding-left:20px"
-                                class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                    </li>
+                    </li> -->
 
-            </div>
-        </div>
-    </nav>
+                   <li class="nav-item">
+                       <a href="cart.html">
+
+                           <i style="color: black;margin-top: 10px;font-size:30px;padding-left:20px"
+                               class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                   </li>
+                   <div class="dropdown">
+                       <li class="nav-item">
+                           <span class='badge badge-warning' id='lblCartCount'>0</span>
+                       </li>
+
+
+                   </div>
+                   <!-- <li class="nav-item">
+
+                        <i onclick="Loguout()" style="color: black;margin-top: 10px;font-size:30px;padding-left:20px"
+                            class='fa fa-sign-out' aria-hidden="true"></i></a>
+                    </li> -->
+                   <div class="nav-item dropdown">
+                       <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Settings</a>
+                       <div class="dropdown-menu">
+                           <a href="userproductorders.html" style="cursor:pointer;" class="dropdown-item showcolor">Your
+                               Orders <i style="color: black;font-size:20px;" class='fa fa-cart-arrow-down'
+                                   aria-hidden="true"></i></a>
+                           <a onclick="Loguout()" style="cursor:pointer;" class="dropdown-item showcolor">LogOut <i
+                                   style="color: black;font-size:20px;" class='fa fa-sign-out'
+                                   aria-hidden="true"></i></a>
+
+                       </div>
+                   </div>
+           </div>
+       </div>
+   </nav>
     <div class="section-empty" style="margin-top:130px;">
         <div class="container content">
             <div class="row">
@@ -185,6 +212,7 @@
                     <button onclick="Placeorder()" type="button" class="total_btn_cart text_center_button">
                         Place Order
                     </button>
+                    <br>
                 </div>
                 <div class="col-md-5">
                     <div class="yourCart_div">
@@ -211,6 +239,10 @@
 
         <!-- end content -->
         <script>
+            window.onload = function(){
+                      var cart = localStorage.getItem("Addcart")
+                      document.getElementById("lblCartCount").innerHTML = cart
+            }
             var product_id = localStorage.getItem("product_id")
             var productimgurl = localStorage.getItem("productimgurl")
             var productdescrb = localStorage.getItem("productdescrb")
@@ -222,7 +254,7 @@
             document.getElementById("pdes").value = "Product Description :  " + productdescrb;
             document.getElementById("price").value = "Total Amount $" + productprice;
         </script>
-        <script src="orders.js"></script>
+        <script src="JS/orders.js"></script>
 </body>
 
 </html>

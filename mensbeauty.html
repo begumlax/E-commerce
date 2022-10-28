@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce website</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--SWEET ALERT-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+
+
+    <!------------>
+</head>
+
+<body>
+       <!--NAVIGATION-->
+       <nav id="NAVBARBEFORELOGIN" class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+           <div class="container">
+               <h1>Sho<span style="color: coral;">Pp</span>erZ </h1><span style="font-size:8px;margin-bottom:8px">Make
+                   <br> Ur
+                   <br> Shoping eAsY </span>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                   aria-label="Toggle navigation">
+                   <span><i id="bar" class="fa fa-tasks"></i></span>
+               </button>
+
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav ml-auto">
+                       <form action="">
+                           <i class="fa fa-search" aria-hidden="true"></i>
+                           <input type="text" name="" id="search-item" placeholder="search-product" onkeyup="search()">
+                       </form>
+                       <li class="nav-item">
+                           <a class="nav-link active" style="margin-top: 10px;" href="index.html">Home</a>
+                       </li>
+                       <div class="dropdown">
+                           <li class="nav-item">
+                               <a> <button class="nav-link"
+                                       style="background-color:white;margin-top: 10px;">Shop</button></a>
+                           </li>
+                           <div id="SHOWOPTIONS" class="dropdown-content">
+                               <div class="row">
+                                   <div class="column">
+                                       <h3>MEN <span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                   src="./images/mens.png" alt=""></span></h3>
+                                       <a href="mensshirts.html">Shirts</a>
+                                       <a href="menstshirts.html">T-shirts</a>
+                                       <a href="mensjeans.html">Jeans</a>
+
+                                   </div>
+                                   <div class="column">
+                                       <h3>WOMEN<span><img style="width:30px;height:30px;margin-bottom:5px"
+                                                   src="./images/womens2.png" alt=""></span></h3>
+                                       <a href="womenskurta.html">Kurta</a>
+                                       <a href="womensdresses.html">Dresses</a>
+                                       <a href="womenstops.html">Tops</a>
+
+                                   </div>
+                                   <div class="column">
+                                       <h3>KIDS<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                   src="./images/kids.png" alt=""></span></h3>
+                                       <a href="kidsshirts.html">Shirts</a>
+                                       <a href="kidsjeans.html">Jeans</a>
+                                       <a href="kidsdresses.html">Dresses</a>
+
+                                   </div>
+                                   <div class="column">
+                                       <h3>GADGETS<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                   src="./images/gadgets.png" alt=""></span></h3>
+                                       <a href="laptops.html">Laptops</a>
+                                       <a href="mobiles.html">Mobiles</a>
+                                       <a href="electronicdevices.html">Electronic Devices</a>
+
+                                   </div>
+                                   <div class="column">
+                                       <h3>BEAUTY<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                   src="./images/beauty.png" alt=""></span></h3>
+                                       <a href="mensbeauty.html">Mens</a>
+                                       <a href="womensbeauty">Womens</a>
+                                       <a href="naturalproducts.html">Natural Producs</a>
+
+                                   </div>
+                                   <div class="column">
+                                       <h3>GIFTS<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                   src="./images/gifts.png" alt=""></span></h3>
+                                       <a href="birthdaygifts.html">Bithday</a>
+                                       <a href="partyproduct.html">Party</a>
+                                       <a href="marraigeproduct.html">Marraige</a>
+
+                                   </div>
+                                   <div class="column">
+                                       <h3>SHOES<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                   src="./images/shoes.png" alt=""></span></h3>
+                                       <a href="mensshoes.html">Mens</a>
+                                       <a href="womensshoes.html">Womens</a>
+                                       <a href="kidsshoes.html">Kids</a>
+
+                                   </div>
+
+                               </div>
+                           </div>
+                       </div>
+
+                       <li class="nav-item">
+                           <a class="nav-link" type="button" class="btn btn-info btn-round" data-toggle="modal"
+                               data-target="#loginModal" style="margin-top: 10px;cursor:pointer">Login </a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" style="margin-top: 10px;cursor:pointer" type="button"
+                               class="btn btn-info btn-round" data-toggle="modal"
+                               data-target="#registerModal">Register</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" style="margin-top: 10px;cursor:pointer" type="button"
+                               class="btn btn-info btn-round" href="#Becomeseller">Seller</a>
+                       </li>
+
+                       <li class="nav-item">
+                           <a href="cart.html">
+                               <i style="color: black;margin-top: 10px;font-size:30px;padding-left:20px"
+                                   class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                       </li>
+
+               </div>
+           </div>
+       </nav>
+       <!--NAVIGATION AFTER LOGIN-->
+       <nav id="NAVBARLOGIN" class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+           <div class="container">
+               <h1>Sho<span style="color: coral;">Pp</span>erZ </h1><span style="font-size:8px;margin-bottom:8px">Make
+                   <br>
+                   Ur <br> Shoping
+                   eAsY </span>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                   aria-label="Toggle navigation">
+                   <span><i id="bar" class="fa fa-tasks"></i></span>
+               </button>
+
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav ml-auto">
+                       <form action="">
+                           <i class="fa fa-search" aria-hidden="true"></i>
+                           <input type="text" name="" id="search-item" placeholder="search-product" onkeyup="search()">
+                       </form>
+                       <li class="nav-item">
+                           <a class="nav-link active" style="margin-top: 10px;" href="homepage.html">Home</a>
+                       </li>
+                       <div class="dropdown">
+                           <li class="nav-item">
+                               <button a class="nav-link" href="shop(4).html "
+                                   style="background-color:white;margin-top: 10px;">Shop</a></button>
+                           </li>
+                            <div class="dropdown-content">
+                                <div class="row">
+                                    <div class="column">
+                                        <h3>MEN <span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/mens.png" alt=""></span></h3>
+                                        <a href="mensshirts.html">Shirts</a>
+                                        <a href="menstshirts.html">T-shirts</a>
+                                        <a href="mensjeans.html">Jeans</a>
+                                        <a href="mensshirts.html">Shirts</a>
+                                        <a href="menstshirts.html">T-shirts</a>
+                                        <a href="mensjeans.html">Jeans</a>
+                                    </div>
+                                    <div class="column">
+                                        <h3>WOMEN<span><img style="width:30px;height:30px;margin-bottom:5px"
+                                                    src="./images/womens2.png" alt=""></span></h3>
+                                        <a href="womenskurta.html">Kurta</a>
+                                        <a href="womensdresses.html">Dresses</a>
+                                        <a href="womenstops.html">Tops</a>
+
+                                        <a href="womenskurta.html">Kurta</a>
+                                        <a href="womensdresses.html">Dresses</a>
+                                        <a href="womenstops.html">Tops</a>
+
+                                    </div>
+                                    <div class="column">
+                                        <h3>KIDS<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/kids.png" alt=""></span></h3>
+                                        <a href="kidsshirts.html">Shirts</a>
+                                        <a href="kidsjeans.html">Jeans</a>
+                                        <a href="kidsdresses.html">Dresses</a>
+
+                                        <a href="kidsshirts.html">Shirts</a>
+                                        <a href="kidsjeans.html">Jeans</a>
+                                        <a href="kidsdresses.html">Dresses</a>
+
+                                    </div>
+                                    <div class="column">
+                                        <h3>GADGETS<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/gadgets.png" alt=""></span></h3>
+                                        <a href="laptops.html">Laptops</a>
+                                        <a href="mobiles.html">Mobiles</a>
+                                        <a href="electronicdevices.html">Electronic Devices</a>
+
+                                        <a href="laptops.html">Laptops</a>
+                                        <a href="mobiles.html">Mobiles</a>
+                                        <a href="electronicdevices.html">Electronic Devices</a>
+
+                                    </div>
+                                    <div class="column">
+                                        <h3>BEAUTY<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/beauty.png" alt=""></span></h3>
+                                        <a href="mensbeauty.html">Mens</a>
+                                        <a href="womensbeauty.html">Womens</a>
+                                        <a href="naturalproducts.html">Natural Producs</a>
+
+                                        <a href="mensbeauty.html">Mens</a>
+                                        <a href="womensbeauty.html">Womens</a>
+                                        <a href="naturalproducts.html">Natural Producs</a>
+
+                                    </div>
+                                    <div class="column">
+                                        <h3>GIFTS<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/gifts.png" alt=""></span></h3>
+                                        <a href="birthdaygifts.html">Bithday</a>
+                                        <a href="partyproduct.html">Party</a>
+                                        <a href="marraigeproduct.html">Marraige</a>
+
+                                        <a href="birthdaygifts.html">Bithday</a>
+                                        <a href="partyproduct.html">Party</a>
+                                        <a href="marraigeproduct.html">Marraige</a>
+
+                                    </div>
+                                    <div class="column">
+                                        <h3>SHOES<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/shoes.png" alt=""></span></h3>
+                                        <a href="mensshoes.html">Mens</a>
+                                        <a href="womensshoes.html">Womens</a>
+                                        <a href="kidsshoes.html">Kids</a>
+
+                                        <a href="mensshoes.html">Mens</a>
+                                        <a href="womensshoes.html">Womens</a>
+                                        <a href="kidsshoes.html">Kids</a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                       </div>
+
+                       <!-- <li class="nav-item">
+                        <a class="nav-link" style="margin-top: 10px;" href="seller.html">Seller</a>
+                    </li> -->
+
+                       <li class="nav-item">
+                           <a href="cart.html">
+
+                               <i style="color: black;margin-top: 10px;font-size:30px;padding-left:20px"
+                                   class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                       </li>
+                       <div class="dropdown">
+                           <li class="nav-item">
+                               <span class='badge badge-warning' id='lblCartCount'>0</span>
+                           </li>
+
+
+                       </div>
+                       <!-- <li class="nav-item">
+
+                        <i onclick="Loguout()" style="color: black;margin-top: 10px;font-size:30px;padding-left:20px"
+                            class='fa fa-sign-out' aria-hidden="true"></i></a>
+                    </li> -->
+                       <div class="nav-item dropdown">
+                           <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Settings</a>
+                           <div class="dropdown-menu">
+                               <a href="userproductorders.html" style="cursor:pointer;"
+                                   class="dropdown-item showcolor">Your
+                                   Orders <i style="color: black;font-size:20px;" class='fa fa-cart-arrow-down'
+                                       aria-hidden="true"></i></a>
+                               <a onclick="Loguout()" style="cursor:pointer;" class="dropdown-item showcolor">LogOut <i
+                                       style="color: black;font-size:20px;" class='fa fa-sign-out'
+                                       aria-hidden="true"></i></a>
+
+                           </div>
+                       </div>
+               </div>
+           </div>
+       </nav>
+
+
+    <section id="watches" class="my-5 ">
+        <div class="container text-center mt-5 py-5 ">
+            <h3>Best Jeans Pants</h3>
+            <hr class="mx-auto">
+        </div>
+        <div class="row tshirts" style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
+
+        </div>
+    </section>
+
+
+
+    <footer class="mt-5 py-5">
+        <div class="row container mx-auto pt-5">
+            <div class="footeer-one col-lg-3 col-md-6 col-12">
+                <h1 style="color: coral;">ShoPperZ</h1>
+                <p class="pt-3">Fringlla urana Porttior rhoncus dolor purpus luctus venenatics lectus magna
+                    fringilla diam maecenas ultricies mi eget mauris.
+                </p>
+            </div>
+            <div class="footeer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Featured</h5>
+                <ul class="text-uppercase list-unstyled">
+                    <li><a href="#">men</a></li>
+                    <li><a href="#">women</a></li>
+                    <li><a href="#">boys</a></li>
+                    <li><a href="#">girls</a></li>
+                    <li><a href="#">new arrival</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">cloths</a></li>
+                </ul>
+            </div>
+            <div class="footeer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Contact Us</h5>
+                <div>
+                    <h6 class="text-uppecase">Address</h6>
+                    <p>123 STREET NAME, CITY, US</p>
+                </div>
+                <div>
+                    <h6 class="text-uppecase">PHONE</h6>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div>
+                    <h6 class="text-uppecase">email</h6>
+                    <p>mail@example.com</p>
+                </div>
+            </div>
+            <div id="Becomeseller" class="footeer-one col-lg-3 col-md-6 col-12">
+                <h5 class="pb-2">Become a Seller</h5>
+                <div>
+                    <a type="button" class="btn  btn-round" data-toggle="modal" data-target="#loginModalforseller"
+                        style="margin-top: 10px;cursor:pointer">
+                        <h6 class="text-uppecase">Login &nbsp;<i class="fas fa-user-check" aria-hidden="true"></i></h6>
+                    </a>
+
+                </div>
+                <br>
+                <div>
+                    <a type="button" class="btn  btn-round" data-toggle="modal" data-target="#registerModalforseller"
+                        style="margin-top: 10px;cursor:pointer">
+                        <h6 class="text-uppecase">Register &nbsp;<i class="fas fa-user-plus" aria-hidden="true"></i>
+                        </h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="modal fade" id="loginModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header border-bottom-0">
+                    <div class="form-title text-center">
+                        <h4 style="margin-left:100px">
+                            LogIn</h4><img src="./images/logoforwebsite.png"
+                            style="height: 60px !important;width:250px !important;border-radius:60px;margin-left:100px"
+                            alt="">
+                    </div>
+                    <div class="close-box" style="background-color: coral;" data-dismiss="modal">
+                        <i class="fa fa-times" style="font-size:20px;"></i>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"> <i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="email" placeholder="Your Email..."
+                                    aria-label="email" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="password" placeholder="Your Password..."
+                                    aria-label="password" aria-describedby="basic-addon1">
+                            </div>
+                            <button type="button" style="background-color: coral !important;"
+                                class="btn btn-block btn-round" onclick="UserLogin()">Login</button>
+                        </form>
+                        <br>
+                        <div class="text-center text-muted delimiter">or use a social network</div>
+                        <br>
+                        <div class="d-flex  row justify-content-center social-buttons">
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top"
+                                title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip"
+                                data-placement="top" title="Linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="registerModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <div class="form-title text-center">
+                        <h4 style="margin-left:100px">
+                            Register</h4><img src="./images/logoforwebsite.png"
+                            style="height: 60px !important;width:250px !important;border-radius:60px;margin-left:100px"
+                            alt="">
+                    </div>
+                    <div class="close-box" style="background-color: coral;" data-dismiss="modal">
+                        <i class="fa fa-times" style="font-size:20px;"></i>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"> <i
+                                            class="fas fa-user-circle"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="username" placeholder="Your Username..."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="email" placeholder="Your email address..."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="password" placeholder="Your password..."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+
+                            <button type="button" style="background-color: coral !important;"
+                                class="btn btn-block btn-round" onclick="UserRegister()">Register</button>
+                        </form>
+                        <br>
+                        <div class="text-center text-muted delimiter">or use a social network</div>
+                        <br>
+                        <div class="d-flex  row justify-content-center social-buttons">
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top"
+                                title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip"
+                                data-placement="top" title="Linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="modal fade" id="loginModalforseller" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <div class="form-title text-center">
+                        <h4 style="margin-left:100px">
+                            LogIn As a Seller</h4><img src="./images/logoforwebsite.png"
+                            style="height: 60px !important;width:250px !important;border-radius:60px;margin-left:100px"
+                            alt="">
+                    </div>
+                    <div class="close-box" style="background-color: coral;" data-dismiss="modal">
+                        <i class="fa fa-times" style="font-size:20px;"></i>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"> <i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="selleremail" placeholder="Your Email..."
+                                    aria-label="email" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="sellerpassword"
+                                    placeholder="Your Password..." aria-label="password"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                            <button type="button" style="background-color: coral !important;"
+                                class="btn btn-block btn-round" onclick="SellerLogin()">Login</button>
+                        </form>
+                        <br>
+                        <div class="text-center text-muted delimiter">or use a social network</div>
+                        <br>
+                        <div class="d-flex  row justify-content-center social-buttons">
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top"
+                                title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip"
+                                data-placement="top" title="Linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="registerModalforseller" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <div class="form-title text-center">
+                        <h4 style="margin-left:100px">
+                            Register As a Seller</h4><img src="./images/logoforwebsite.png"
+                            style="height: 60px !important;width:250px !important;border-radius:60px;margin-left:100px"
+                            alt="">
+                    </div>
+                    <div class="close-box" style="background-color: coral;" data-dismiss="modal">
+                        <i class="fa fa-times" style="font-size:20px;"></i>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"> <i
+                                            class="fas fa-user-circle"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="username" placeholder="Your Username..."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="email" placeholder="Your email address..."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="password" placeholder="Your password..."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+
+                            <button type="button" style="background-color: coral !important;"
+                                class="btn btn-block btn-round" onclick="Register()">Register</button>
+                        </form>
+                        <br>
+                        <div class="text-center text-muted delimiter">or use a social network</div>
+                        <br>
+                        <div class="d-flex  row justify-content-center social-buttons">
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top"
+                                title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip"
+                                data-placement="top" title="Linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+ <script>
+     var logs = localStorage.getItem("access");
+     console.log(logs)
+     if (logs == "yes") {
+         console.log("CONDTION TRUE")
+         document.getElementById("NAVBARLOGIN").style.display = "block";
+         document.getElementById("NAVBARBEFORELOGIN").style.display = "none";
+     } else {
+         console.log("CONDTION FALSE")
+         document.getElementById("NAVBARBEFORELOGIN").style.display = "block";
+         document.getElementById("NAVBARLOGIN").style.display = "none";
+     }
+ </script>
+   <script src="JS/index.js"></script>
+   <script src="/JS/products.js"></script>
+    <script src="JS/loadallproducts.js"></script>
+      <script src="/JS/user.js"></script>
+    <script>
+        window.onload = function () {
+            Load_ALLTshirts('Tshirts')
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

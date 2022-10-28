@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="style2 (2).css">
+    <link rel="stylesheet" href="/index.css">
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <style>
         .main {
@@ -34,7 +34,7 @@
 
         img {
             height: 300px;
-            max-width: 250px;
+             max-width: 250px;
             vertical-align: middle;
         }
 
@@ -120,10 +120,19 @@
 </head>
 
 <body>
+    <script>
+        var access = localStorage.getItem("emailid")
+        if(access){
+
+        }else{
+            location.href="index.html"
+        }
+    </script>
     <!--NAVIGATION-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
         <div class="container">
-            <h1>ShoPperZ</h1>
+             <h1>Sho<span style="color: coral;">Pp</span>erZ </h1><span style="font-size:8px;margin-bottom:8px">Make <br> Ur <br> Shoping
+                 eAsY </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -137,7 +146,7 @@
                         <input type="text" name="" id="search-item" placeholder="search-product" onkeyup="search()">
                     </form>
                     <li class="nav-item">
-                        <a class="nav-link active" style="margin-top: 10px;" href="index.html">Home</a>
+                        <a class="nav-link active" style="margin-top: 10px;" href="homepage.html">Home</a>
                     </li>
                     <div class="dropdown">
                         <li class="nav-item">
@@ -145,26 +154,91 @@
                                 style="background-color:white;margin-top: 10px;">Shop</a></button>
                         </li>
                         <div class="dropdown-content">
-                            <div class="row">
-                                <div class="column">
-                                    <h3>MEN</h3>
-                                    <a href="Men-Shirt.html">Shirts</a>
-                                    <a href="mentshirtshop.html">T-shirts</a>
-                                    <a href="jeansshop.html">Jeans</a>
+                                <div class="row">
+                                    <div class="column">
+                                        <h3>MEN <span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/mens.png" alt=""></span></h3>
+                                                         <a href="mensshirts.html">Shirts</a>
+                                                         <a href="menstshirts.html">T-shirts</a>
+                                                         <a href="mensjeans.html">Jeans</a>
+                                                        <a href="mensshirts.html">Shirts</a>
+                                                        <a href="menstshirts.html">T-shirts</a>
+                                                        <a href="mensjeans.html">Jeans</a>
+                                    </div>
+                                    <div class="column">
+                                        <h3>WOMEN<span><img style="width:30px;height:30px;margin-bottom:5px"
+                                                    src="./images/womens2.png" alt=""></span></h3>
+                                        <a href="womenskurta.html">Kurta</a>
+                                        <a href="womensdresses.html">Dresses</a>
+                                        <a href="womenstops.html">Tops</a>
+
+                                         <a href="womenskurta.html">Kurta</a>
+                                         <a href="womensdresses.html">Dresses</a>
+                                         <a href="womenstops.html">Tops</a>
+
+                                    </div>
+                                    <div class="column">
+                                        <h3>KIDS<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/kids.png" alt=""></span></h3>
+                                       <a href="kidsshirts.html">Shirts</a>
+                                       <a href="kidsjeans.html">Jeans</a>
+                                       <a href="kidsdresses.html">Dresses</a>
+
+                                        <a href="kidsshirts.html">Shirts</a>
+                                        <a href="kidsjeans.html">Jeans</a>
+                                        <a href="kidsdresses.html">Dresses</a>
+
+                                    </div>
+                                    <div class="column">
+                                        <h3>GADGETS<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/gadgets.png" alt=""></span></h3>
+                                       <a href="laptops.html">Laptops</a>
+                                       <a href="mobiles.html">Mobiles</a>
+                                       <a href="electronicdevices.html">Electronic Devices</a>
+
+                                         <a href="laptops.html">Laptops</a>
+                                         <a href="mobiles.html">Mobiles</a>
+                                         <a href="electronicdevices.html">Electronic Devices</a>
+
+                                    </div>
+                                    <div class="column">
+                                        <h3>BEAUTY<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/beauty.png" alt=""></span></h3>
+                                      <a href="mensbeauty.html">Mens</a>
+                                      <a href="womensbeauty.html">Womens</a>
+                                      <a href="naturalproducts.html">Natural Producs</a>
+
+                                       <a href="mensbeauty.html">Mens</a>
+                                       <a href="womensbeauty.html">Womens</a>
+                                       <a href="naturalproducts.html">Natural Producs</a>
+
+                                    </div>
+                                    <div class="column">
+                                        <h3>GIFTS<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/gifts.png" alt=""></span></h3>
+                                         <a href="birthdaygifts.html">Bithday</a>
+                                         <a href="partyproduct.html">Party</a>
+                                         <a href="marraigeproduct.html">Marraige</a>
+
+                                         <a href="birthdaygifts.html">Bithday</a>
+                                         <a href="partyproduct.html">Party</a>
+                                         <a href="marraigeproduct.html">Marraige</a>
+
+                                    </div>
+                                    <div class="column">
+                                        <h3>SHOES<span><img style="width:25px;height:25px;margin-bottom:5px"
+                                                    src="./images/shoes.png" alt=""></span></h3>
+                                        <a href="mensshoes.html">Mens</a>
+                                        <a href="womensshoes.html">Womens</a>
+                                        <a href="kidsshoes.html">Kids</a>
+
+                                         <a href="mensshoes.html">Mens</a>
+                                         <a href="womensshoes.html">Womens</a>
+                                         <a href="kidsshoes.html">Kids</a>
+
+                                    </div>
+
                                 </div>
-                                <div class="column">
-                                    <h3>WOMEN</h3>
-                                    <a href="#">Kurta</a>
-                                    <a href="#">Dresses</a>
-                                    <a href="#">Tops</a>
-                                </div>
-                                <div class="column">
-                                    <h3>KIDS</h3>
-                                    <a href="kisdshop.html">Shirts</a>
-                                    <a href="kjeansshop.html">Jeans</a>
-                                    <a href="#">Dresses</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -193,7 +267,10 @@
                     <div class="nav-item dropdown">
                         <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Settings</a>
                         <div class="dropdown-menu">
-                            <a onclick="Loguout()" style="cursor:pointer;" class="dropdown-item">LogOut <i 
+                              <a href="userproductorders.html" style="cursor:pointer;"  class="dropdown-item showcolor">Your Orders <i
+                                      style="color: black;font-size:20px;" class='fa fa-cart-arrow-down'
+                                      aria-hidden="true"></i></a>
+                            <a onclick="Loguout()" style="cursor:pointer;" class="dropdown-item showcolor">LogOut <i
                                     style="color: black;font-size:20px;"
                                     class='fa fa-sign-out' aria-hidden="true"></i></a>
                            
@@ -203,12 +280,16 @@
         </div>
     </nav>
 
-    <section id="home">
+
+
+    
+
+    <section id="home" style="background-image: url('./images/1.jpg');">
         <div class="container">
             <h5>NEW ARRIVAL</h5>
             <h1><span>Best Price</span> This Year</h1>
             <p>Shoomatic offers your very comfortable time<br> on walking and exercises</p>
-            <a href="shop (4).html" style="color: black;"><button style="color: black;margin-left:90px">Shop
+            <a href="#" style="color: black;"><button style="color: black;margin-left:90px">Shop
                     Now</button></a>
         </div>
     </section>
@@ -240,20 +321,20 @@
         <div class="row p-0 m-0">
             <div class="one col-lg-4 col-md-12 col-12p-0">
                 <img class="img-fluid"
-                    src="https://assets.ajio.com/medias/sys_master/root/20211026/PmjJ/6176fd75aeb2690110a887bd/dnmx_red_zip-front_jacket_with_insert_pockets.jpg"
+                    src="https://assets.ajio.com/medias/sys_master/root/20220528/VWa3/62913dfaf997dd03e23fe607/urbano_fashion_green_leaf_print_crew-neck_t-shirt.jpg"
                     alt="">
                 <div class="details">
                     <h2 style="color: black;margin-left:150px">Extreme Mens Shirts</h2>
 
-                    <a href="shop (4).html" style="color: blak;"> <button style="color: black;margin-left:190px"
-                            class="text-uppercase">Shop Now</button></a>
+                    <a href="#" style="color: blak;"> <button style="color: black;margin-left:190px"
+                            class="text-uppercase">Shop
+                            Now</button></a>
                 </div>
             </div>
 
             <div class="one col-lg-4 col-md-12 col-12p-0">
                 <img class="img-fluid"
-                    src="https://assets.ajio.com/medias/sys_master/root/20211027/7Znh/61789fceaeb2690110abb969/znx_clothing_multicoloured_floral_print_wrap_top.jpg"
-                    alt="">
+                    src="https://res.cloudinary.com/djqnvvxjd/image/upload/v1584015614/jkamk5yfkg7wjkieazpo.jpg" alt="">
                 <div class="details">
                     <h2>Awesome Printed Tops</h2>
                     <button class="text-uppercase">Shop Now</button>
@@ -262,7 +343,7 @@
 
             <div class="one col-lg-4 col-md-12 col-12p-0">
                 <img class="img-fluid"
-                    src="https://assets.ajio.com/medias/sys_master/root/20220502/SL5j/626feee1f997dd03e28e2343/r_k_maniyar_pink_cartoon_fit_and_flare_dress.jpg"
+                    src="https://images.pexels.com/photos/1620788/pexels-photo-1620788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                     alt="">
                 <div class="details">
                     <h2 style="color: black;margin-right:100px">Kids Cloths Up To 50% off</h2>
@@ -279,16 +360,19 @@
             <hr class="mx-auto">
             <p>Here you can check out our new products with fair price on Shopperz.</p>
         </div>
-        <div class="newproducts row" style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
 
+        <!----------------------------NEW PRODUCTS------------------------>
+        <div class="newproducts row" style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
+            <div id="loading"></div>
         </div>
+        <!----------------------------------------------------------------------->
     </section>
 
     <section id="banner" class="my-5 py-5">
         <div class="container">
             <h4>MID SEASON'S SALE</h4>
             <h1>Autumn Collection<br>UP TO 20% OFF</h1>
-            <a href="shop.html"><button class="text-uppercase">Shop Now</button></a>
+            <a href="#"><button class="text-uppercase">Shop Now</button></a>
         </div>
     </section>
 
@@ -298,9 +382,11 @@
             <hr class="mx-auto">
             <p>Here you can check out our new products with fair price on Shopperz.</p>
         </div>
+        <!-----------------------T SHIRTS---------------------------------------------------------->
         <div class="row tshirts" style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
-
+            <div id="loading"></div>
         </div>
+        <!----------------------------------------------------------------------------->
     </section>
 
     <section id="watches" class="my-5 ">
@@ -309,9 +395,11 @@
             <hr class="mx-auto">
             <p>Here you can check out our new products with fair price on Shopperz.</p>
         </div>
+        <!---------------------------------WOMENS TOPS-------------------------------------->
         <div class="row womentops" style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
-
+            <div id="loading"></div>
         </div>
+        <!-------------------------------------------------------------------------------------->
     </section>
 
     <section id="shoes" class="my-5 pb-5 ">
@@ -320,24 +408,15 @@
             <hr class="mx-auto">
             <p>Here you can check out our new products with fair price on Shopperz.</p>
         </div>
-        <div class="row  jeanspantshome" style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
-            <!-- <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img  class="img-fluid mb-3" src="https://assets.ajio.com/medias/sys_master/root/20211013/duCz/61662fe3aeb26901108f0774/dennislingo_premium_attire_pink_full_sleeves_slim_fit_classic_shirt.jpg" alt="">
-                <div class="star">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <h5 class="p-name">Shirt</h5>
-                <h4 class="p-price">$92</h4>
-                <button class="buy-btn">Buy Now</button>
-              </div> -->
+        <!---------------------JEANS PANTS-------------------------->
+        <div class="row jeanspantshome"
+            style="margin-left: 60px !important;margin-right:0px !important;text-align:center">
+            <div id="loading"></div>
         </div>
+        <!------------------------------------------------------------------->
     </section>
 
-    <footer class="mt-5 py-5">
+    <footer>
         <div class="row container mx-auto pt-5">
             <div class="footeer-one col-lg-3 col-md-6 col-12">
                 <h1 style="color: coral;">ShoPperZ</h1>
@@ -373,13 +452,14 @@
                 </div>
             </div>
             <div class="footeer-one col-lg-3 col-md-6 col-12">
-                <h5 class="pb-2">Instagram</h5>
-                <div class="row">
-                    <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\1.jpg" alt="">
-                    <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\2.jpg" alt="">
-                    <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\3.jpg" alt="">
-                    <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\4.jpg" alt="">
-                    <img class="img-fluid w-25 h-100 m-2" src="C:\Users\Basheer\Desktop\img\insta\5.jpg" alt="">
+                <h5 class="pb-2">Become a Seller</h5>
+                <div>
+                    <h6 class="text-uppecase">Login</h6>
+                    <p>123 STREET NAME, CITY, US</p>
+                </div>
+                <div>
+                    <h6 class="text-uppecase">Register</h6>
+                    <p>(123) 456-7890</p>
                 </div>
             </div>
         </div>
@@ -400,24 +480,175 @@
         </div>
     </footer>
 
+    <div class="modal fade" id="loginModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <div class="form-title text-center">
+                        <h4>Login</h4>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"> <i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="email" placeholder="Your Email..."
+                                    aria-label="email" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="password" placeholder="Your Password..."
+                                    aria-label="password" aria-describedby="basic-addon1">
+                            </div>
+                            <button type="button" style="background-color: coral !important;"
+                                class="btn btn-block btn-round" onclick="UserLogin()">Login</button>
+                        </form>
+                        <br>
+                        <div class="text-center text-muted delimiter">or use a social network</div>
+                        <br>
+                        <div class="d-flex  row justify-content-center social-buttons">
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top"
+                                title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip"
+                                data-placement="top" title="Linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="registerModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <div class="form-title text-center">
+                        <h4>Register</h4>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"> <i
+                                            class="fas fa-user-circle"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="username" placeholder="Your Username..."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="email" placeholder="Your email address..."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="password" placeholder="Your password..."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+
+                            <button type="button" style="background-color: coral !important;"
+                                class="btn btn-block btn-round" onclick="UserRegister()">Register</button>
+                        </form>
+                        <br>
+                        <div class="text-center text-muted delimiter">or use a social network</div>
+                        <br>
+                        <div class="d-flex  row justify-content-center social-buttons">
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button type="button" style="margin-right: 10px !important;"
+                                class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top"
+                                title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip"
+                                data-placement="top" title="Linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/JS/products.js"></script>
+    <script src="/JS/seller.js"></script>
+    <script src="/JS/user.js"></script>
+    <script>
+        var cycle = 0;
+         var allBackgrounds = [
+         './images/2.jpg',
+         './images/3.jpg',
+         './images/4.jpg',
+         './images/5.jpg',
+         './images/1.jpg'
+         ];
+
+        setInterval(function () {
+            if (cycle < 5) {
+                for (let i = 0; i < allBackgrounds.length; i++) {
+                    document.getElementById('home').style.backgroundImage = "url('" + allBackgrounds[cycle] +
+                        "')";
+                }
+
+                cycle += 1;
+            } else {
+                cycle = 0;
+            }
+        }, 2000);
+    </script>
     <script>
         window.onload = function () {
-           
+              
             Load_Tshirts('Tshirts')
             Load_Tops('Womenstop')
             Load_Shirts('Mensshirt')
             Load_JEANSHomepage('Jeanspants')
-           
+            var cartnumber = localStorage.getItem("Addcart")
+
+            document.getElementById("lblCartCount").innerHTML=cartnumber
         }
     </script>
-    <script src="seller.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-    </script>
-</body>
 
-</html>
+
+    
+  
+      
+    </body>
+
+    </html>
