@@ -1,0 +1,156 @@
+.billing_text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    font-size: 16px;
+    color: #737373;
+}
+
+.yourCart_div {}
+
+.cart_img_content {}
+
+.food_img_price_des {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.food_img_price_des .cart_food_img {
+    width:330px;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid #d4d4d491;
+    padding: 4px;
+}
+
+.food_img_price_des .cart_food_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food_img_price_des .food_dec_flex {
+    margin-left: 2rem;
+}
+
+.food_img_price_des .food_dec_flex p {
+    color: #737373;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.food_img_price_des .food_dec_flex p:last-child {
+    color: red;
+}
+
+.yourCart_div {
+    /* border: 1px solid #d4d4d491;
+    padding: 19px; */
+    margin-top: 2rem;
+}
+
+.cart_total {}
+
+.cart_total .price_total {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.cart_total .price_total p {
+    color: #737373;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.total_btn_cart {
+    width: 100%;
+    background: #ac1734 !important;
+    border-color: #ac1734 !important;
+    padding: 9px 19px !important;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 500;
+    border-style: unset;
+    font-family: "Montserrat", sans-serif;
+}
+
+.total_btn_cart:hover {
+    background-color: #ac1734 !important;
+    border-color: #ac1734 !important;
+}
+
+.cart_total {
+    border: 1px solid #d4d4d491;
+    padding: 8px 19px;
+    border-top: 0;
+}
+
+.input_form .input_box_cart input,
+.input_form .input_box_cart textarea {
+    width: 100%;
+    border: 1px solid #d4d4d491;
+    outline: none;
+    padding: 6px 10px;
+    font-weight: 600;
+    font-size: 13px;
+    resize: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.input_form .input_box_cart {
+    margin-bottom: 15px;
+}
+
+.mb_23px {
+    margin-bottom: 20px !important;
+}
+
+.text_center_button {
+    justify-content: center;
+}
+
+.input_form {
+    margin-top: 2rem;
+}
+
+.footer-parallax-container {
+    margin-bottom: 0 !important;
+    box-shadow: none;
+    min-height: auto !important;
+}
+
+.footer-parallax {
+    height: auto !important;
+    position: relative !important;
+    background-color: #f5f5f5 !important;
+    z-index: 1;
+}
+
+.section-bg-image_full_height {
+    background-image: url(../images/hd-8.png);
+    background-attachment: fixed;
+}
+
+.mt-12px {
+    margin-top: 12px !important;
+}
+
+.bg_green {
+    background-color: #4caf50 !important;
+    border-color: #4caf50 !important;
+}
+
+.bg_green:hover {
+    background-color: #4caf50 !important;
+    border-color: #4caf50 !important;
+}
+
+button {
+    outline: none !important;
+}
